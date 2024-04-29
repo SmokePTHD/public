@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+$_SESSION['lock-screen'] = true;
+?>
 <!DOCTYPE html>
 <html lang="pt-PT" dir="ltr">
 
@@ -10,7 +15,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title> Clinica Rio Este | Logout </title>
+    <title>Clinica Rio Este | Login</title>
 
 
     <!-- ===============================================-->
@@ -67,9 +72,27 @@
                   </div>
                   <div class="col-md-7 d-flex flex-center">
                     <div class="p-4 p-md-5 flex-grow-1">
-                      <div class="text-center">
-                        <h3>Bom Trabalho!</h3>
-                        <p>Você saiu da sua conta</p><a class="btn btn-primary btn-sm mt-3" style="background: #0388A6;" href="../../../pages/authentication/card/login.html"><span class="fas fa-chevron-left me-1" data-fa-transform="shrink-4 down-1"></span>Voltar para o Login</a>
+                      <div class="row justify-content-center">
+                        <div class="col-auto">
+                          <div class="d-flex align-items-center">
+                            <div class="avatar avatar-4xl me-4">
+                              <img class="rounded-circle" src="../../../assets/img/team/1.jpg" alt="" />
+
+                            </div>
+                            <div class="flex-1">
+                              <h4>Olá <?php echo $_SESSION['usuario']?>!</h4>
+                              <p class="mb-0">Introduza a sua password<br> para continuar.</p>
+                            </div>
+                          </div>
+                          <form class="mt-4 row gx-2">
+                            <div class="col">
+                              <input class="form-control" type="password" placeholder="Password" aria-label="User's password" aria-describedby="user-password" />
+                            </div>
+                            <div class="col-4">
+                              <button class="btn btn-primary d-block w-100" style="background: #0388A6;" id="user-password" type="button" onclick="check()">Login</button>
+                            </div>
+                          </form>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -80,6 +103,13 @@
         </div>
       </div>
     </main>
+    <script>
+      async function check(){
+        password = document.getElementById('user-password').value;
+        
+        const data = await fetch('../../../backend/lock-screen-check', )
+      }
+    </script>
     <!-- ===============================================-->
     <!--    End of Main Content-->
     <!-- ===============================================-->

@@ -7,8 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     include("conexion.php");
 
-    $stmt = $conn->prepare("SELECT id, password FROM usuarios WHERE usuario = '$usuario' OR email = '$usuario'");
-    // $stmt->bind_param("s", $usuario, $usuario);
+    $stmt = $conn->prepare("SELECT id, password FROM usuarios WHERE usuario = ? OR email = ?");
+    $stmt->bind_param("ss", $usuario, $usuario);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -16,15 +16,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['usuario'] = $row['usuario'];
+            $_SESSION['lock-screen'] = false;
+
             $stmt_update = $conn->prepare("UPDATE usuarios SET status = 'online'");
             $stmt_update->execute();
-            header("Location: ../index.html");
+            header("Location: ../index.php");
             exit();
         } else {
-            header("Location: ../pages/authentication/login.html");
+            header("Location: ../pages/authentication/card/login.html");
         }
     } else {
-        header("Location: ../pages/authentication/login.html");
+        header("Location: ../pages/authentication/card/login.html");
     }
 
     $stmt->close();

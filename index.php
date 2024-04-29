@@ -1,13 +1,7 @@
-<!-- <?php
-session_start();
+<?php 
+include("./backend/login-check.php");
+?>
 
-// Verifique se o usuário está autenticado
-if (!isset($_SESSION["username"])) {
-    header("Location: index.html");
-    exit();
-}
-
-?> -->
 <!DOCTYPE html>
 <html lang="pt-PT" dir="ltr">
 
@@ -45,17 +39,10 @@ if (!isset($_SESSION["username"])) {
     <link href="vendors/simplebar/simplebar.min.css" rel="stylesheet">
     <link href="assets/css/theme.min.css" rel="stylesheet" id="style-default">
     <link href="assets/css/user.min.css" rel="stylesheet" id="user-style-default">
-    <script>
-      var linkRTL = document.getElementById('style-rtl');
-      var userLinkRTL = document.getElementById('user-style-rtl');
-      linkRTL.setAttribute('disabled', true);
-      userLinkRTL.setAttribute('disabled', true);
-    </script>
   </head>
 
 
   <body>
-
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
@@ -1165,6 +1152,7 @@ if (!isset($_SESSION["username"])) {
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="vendors/list.js/list.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/inactivity-lock.js"></script>
 
   </body>
 
