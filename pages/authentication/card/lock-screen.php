@@ -1,8 +1,8 @@
 <?php 
 session_start();
 
-$_SESSION['lock-screen'] = true;
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-PT" dir="ltr">
 
@@ -80,7 +80,7 @@ $_SESSION['lock-screen'] = true;
 
                             </div>
                             <div class="flex-1">
-                              <h4>Olá <?php echo $_SESSION['usuario']?>!</h4>
+                              <h4>Olá <?php echo $_SESSION['usuario'] ?>!</h4>
                               <p class="mb-0">Introduza a sua password<br> para continuar.</p>
                             </div>
                           </div>

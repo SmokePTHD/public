@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['usuario'] = $row['usuario'];
-            $_SESSION['lock-screen'] = false;
 
             $stmt_update = $conn->prepare("UPDATE usuarios SET status = 'online'");
             $stmt_update->execute();
