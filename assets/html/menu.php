@@ -81,23 +81,23 @@
                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-calendar-alt"></span></span><span class="nav-link-text ps-1">Agenda</span>
                 </div>
                 </a>
-                <!-- parent pages--><a class="nav-link" href="../public/app/stock.php" role="button">
+                <!-- parent pages--><a class="nav-link" href="../../app/stock.php" role="button">
                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-box"></span></span><span class="nav-link-text ps-1">Stock</span>
                 </div>
                 </a>
-                <!-- parent pages--><a class="nav-link" href="../public/app/chat.php" role="button">
+                <!-- parent pages--><a class="nav-link" href="../../app/chat.php" role="button">
                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Mensagens</span>
                 </div>
                 </a>
-                <!-- parent pages--><a class="nav-link" href="../public/app/email/inbox.php" role="button">
+                <!-- parent pages--><a class="nav-link" href="../../app/email/inbox.php" role="button">
                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-envelope-open"></span></span><span class="nav-link-text ps-1">Email</span>
                 </div>
                 </a>
-                <!-- parent pages--><a class="nav-link" href="../public/app/kanban.php" role="button">
+                <!-- parent pages--><a class="nav-link" href="../../app/kanban.php" role="button">
                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fab fa-trello"></span></span><span class="nav-link-text ps-1">Kanban</span>
                 </div>
                 </a>
-                <!-- parent pages--><a class="nav-link" href="../public/app/calendar.php" role="button">
+                <!-- parent pages--><a class="nav-link" href="../../app/calendar.php" role="button">
                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-user-shield"></span></span><span class="nav-link-text ps-1">Gerir</span>
                 </div>
                 </a>

@@ -15,8 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['usuario'] = $row['usuario'];
+            $_SESSION['usuario'] = $usuario;
 
             $stmt_update = $conn->prepare("UPDATE usuarios SET status = 'online'");
             $stmt_update->execute();

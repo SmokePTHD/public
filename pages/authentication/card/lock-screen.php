@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+echo $_SERVER;
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +81,7 @@ session_start();
 
                             </div>
                             <div class="flex-1">
-                              <h4>Olá <?php echo $_SESSION['usuario'] ?>!</h4>
+                              <h4>Olá !</h4>
                               <p class="mb-0">Introduza a sua password<br> para continuar.</p>
                             </div>
                           </div>
@@ -107,7 +108,7 @@ session_start();
       async function check(){
         password = document.getElementById('user-password').value;
         
-        const data = await fetch('../../../backend/lock-screen-check', )
+        const data = await fetch('../../../backend/lock-screen-check.php', )
       }
     </script>
     <!-- ===============================================-->
